@@ -1,6 +1,4 @@
-package relex.characters;
-
-import java.util.Scanner;
+package com.characters;
 
 public class DworfWarrior extends Character {
     public DworfWarrior(){

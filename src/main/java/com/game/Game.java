@@ -1,5 +1,5 @@
-package relex.game;
-    import relex.characters.Character;
+package com.game;
+    import com.characters.Character;
 public class Game {
     private int move;
     private final static int COUNT_OF_LVLS = 20;

@@ -1,4 +1,4 @@
-package relex.characters;
+package com.characters;
 
 public class HumanMage extends Character {
 

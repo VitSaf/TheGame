@@ -1,4 +1,4 @@
-package relex.characters;
+package com.characters;
 
 import java.util.Scanner;
 

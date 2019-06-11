@@ -1,4 +1,4 @@
-package relex.characters;
+package com.characters;
 
 public class ElfScout extends Character {
     public ElfScout(){

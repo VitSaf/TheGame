@@ -1,7 +1,7 @@
-package relex;
+package com;
 
-import relex.characters.DworfWarrior;
-import relex.characters.ElfScout;
+import com.characters.DworfWarrior;
+import com.characters.ElfScout;
 
 public class gameField {
     private gameField() {}
