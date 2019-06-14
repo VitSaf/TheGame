@@ -39,6 +39,18 @@ public abstract class Character {
         return sc.nextLine();
     }
 
+    public void showCharacteristics(){
+        System.out.println("Your max stamina: " + maxStamina);
+        System.out.println("Your actual stamina: " + actualStamina);
+        System.out.println("You are on " + floor + " level");
+        System.out.println("Descent cost = 5");
+        System.out.println("Fast descent cost = " + fastDescentCost);
+        System.out.println("Special action cost = " + specialActionCost);
+        if(ableToMove) System.out.println("You can move");
+        else System.out.println("you can't move this turn");
+
+    }
+
     public String getName() {
         return name;
     }
@@ -61,5 +73,33 @@ public abstract class Character {
 
     public void setAbleToMove(boolean ableToMove) {
         this.ableToMove = ableToMove;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Character character = (Character) o;
+
+        if (actualStamina != character.actualStamina) return false;
+        if (maxStamina != character.maxStamina) return false;
+        if (fastDescentCost != character.fastDescentCost) return false;
+        if (specialActionCost != character.specialActionCost) return false;
+        if (floor != character.floor) return false;
+        if (ableToMove != character.ableToMove) return false;
+        return name != null ? name.equals(character.name) : character.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + actualStamina;
+        result = 31 * result + maxStamina;
+        result = 31 * result + fastDescentCost;
+        result = 31 * result + specialActionCost;
+        result = 31 * result + floor;
+        result = 31 * result + (ableToMove ? 1 : 0);
+        return result;
     }
 }
