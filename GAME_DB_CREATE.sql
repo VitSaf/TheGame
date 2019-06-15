@@ -1,6 +1,5 @@
 CREATE TABLE "games" (
 	"game_id" serial NOT NULL,
-	"winner" varchar(50) NOT NULL,
 	"player1_nickname" varchar(50) NOT NULL,
 	"player2_nickname" varchar(50) NOT NULL,
 	"player1_hero" varchar(15) NOT NULL,

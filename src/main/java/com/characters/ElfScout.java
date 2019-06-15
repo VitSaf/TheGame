@@ -8,6 +8,13 @@ public class ElfScout extends Character {
         specialActionCost = 24;
         actualStamina = maxStamina;
     }
+    public ElfScout(String nickname){
+        name = nickname;
+        maxStamina = 40;
+        fastDescentCost = 12;
+        specialActionCost = 24;
+        actualStamina = maxStamina;
+    }
     public void specialAction(Character character2) {
         if (actualStamina >= specialActionCost) {
             this.floor += 3;

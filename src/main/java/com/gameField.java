@@ -12,5 +12,6 @@ public class gameField {
         ElfScout p2 = new ElfScout();
         Game g1 = new Game(p1, p2);
         g1.theGame();
+
     }
 }

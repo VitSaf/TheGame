@@ -10,7 +10,6 @@ public class GameRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "game_id")
     private int gameId;
-    private String winner;
     @Column(name = "player1_nickname")
     private String player1Nickname;
     @Column(name = "player2_nickname")
@@ -23,8 +22,7 @@ public class GameRecord {
     public GameRecord() {
     }
 
-    public GameRecord(String winner, String player1Nickname, String player2Nickname, String player1Hero, String player2Hero) {
-        this.winner = winner;
+    public GameRecord(String player1Nickname, String player2Nickname, String player1Hero, String player2Hero) {
         this.player1Nickname = player1Nickname;
         this.player2Nickname = player2Nickname;
         this.player1Hero = player1Hero;
@@ -37,14 +35,6 @@ public class GameRecord {
 
     public void setGameId(int gameId) {
         this.gameId = gameId;
-    }
-
-    public String getWinner() {
-        return winner;
-    }
-
-    public void setWinner(String winner) {
-        this.winner = winner;
     }
 
     public String getPlayer1Nickname() {
@@ -83,7 +73,6 @@ public class GameRecord {
     public String toString() {
         return "GameRecord{" +
                 "gameId=" + gameId +
-                ", winner='" + winner + '\'' +
                 ", player1Nickname='" + player1Nickname + '\'' +
                 ", player2Nickname='" + player2Nickname + '\'' +
                 ", player1Hero='" + player1Hero + '\'' +

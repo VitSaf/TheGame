@@ -9,6 +9,13 @@ public class HumanMage extends Character {
         specialActionCost = 15;
         actualStamina = maxStamina;
     }
+    public HumanMage(String nickname){
+        name = nickname;
+        maxStamina = 30;
+        fastDescentCost = 13;
+        specialActionCost = 15;
+        actualStamina = maxStamina;
+    }
 
     /**
      * Если второй игрок на уровень ниже, то наш персонаж опускается, а враг поднимается

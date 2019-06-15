@@ -8,6 +8,13 @@ public class DworfWarrior extends Character {
         specialActionCost = 20;
         actualStamina = maxStamina;
     }
+    public DworfWarrior(String nickname){
+        name = nickname;
+        maxStamina = 50;
+        fastDescentCost = 15;
+        specialActionCost = 20;
+        actualStamina = maxStamina;
+    }
 
     /**
      * Опускает

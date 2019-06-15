@@ -10,4 +10,5 @@ public interface GameService {
     List<MovesRecord> findMovesByGameId(int gameId);
     void saveGame(GameRecord gameRecord);
     void saveMovesForGame(int gameRecordId, MovesRecord movesRecord);
+    long findCountOfMovesInGame(int gameId);
 }
