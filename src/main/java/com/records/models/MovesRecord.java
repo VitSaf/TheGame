@@ -24,6 +24,13 @@ public class MovesRecord {
     public MovesRecord() {
     }
 
+    public MovesRecord(GameRecord game, int moveNum, String player1Move, String player2Move) {
+        this.game = game;
+        this.moveNum = moveNum;
+        this.player1Move = player1Move;
+        this.player2Move = player2Move;
+    }
+
     public int getMoveId() {
         return moveId;
     }

@@ -1,11 +1,11 @@
-CREATE TABLE "Games" (
+CREATE TABLE "games" (
 	"game_id" serial NOT NULL,
 	"winner" varchar(50) NOT NULL,
 	"player1_nickname" varchar(50) NOT NULL,
 	"player2_nickname" varchar(50) NOT NULL,
 	"player1_hero" varchar(15) NOT NULL,
 	"player2_hero" varchar(15) NOT NULL,
-	CONSTRAINT "Games_pk" PRIMARY KEY ("game_id")
+	CONSTRAINT "games_pk" PRIMARY KEY ("game_id")
 ) WITH (
   OIDS=FALSE
 );
@@ -26,5 +26,5 @@ CREATE TABLE "moves" (
 
 
 
-ALTER TABLE "moves" ADD CONSTRAINT "moves_fk0" FOREIGN KEY ("game_id") REFERENCES "Games"("game_id");
+ALTER TABLE "moves" ADD CONSTRAINT "moves_fk0" FOREIGN KEY ("game_id") REFERENCES "games"("game_id");
 

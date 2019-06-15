@@ -3,7 +3,7 @@ package com.records.models;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "Games")
+@Table (name = "games")
 public class GameRecord {
 
     @Id
@@ -21,6 +21,14 @@ public class GameRecord {
     private String player2Hero;
 
     public GameRecord() {
+    }
+
+    public GameRecord(String winner, String player1Nickname, String player2Nickname, String player1Hero, String player2Hero) {
+        this.winner = winner;
+        this.player1Nickname = player1Nickname;
+        this.player2Nickname = player2Nickname;
+        this.player1Hero = player1Hero;
+        this.player2Hero = player2Hero;
     }
 
     public int getGameId() {
