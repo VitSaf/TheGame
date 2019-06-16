@@ -31,6 +31,16 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>4.2.0</version>
+                <configuration>
+                    <user>postgres</user>
+                    <password>1234</password>
+                    <url>jdbc:postgresql://localhost:5432/gamedb</url>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
